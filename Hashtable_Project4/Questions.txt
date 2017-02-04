@@ -1,0 +1,26 @@
+1) Explain the algorithm in the original program, including why duplicates are reported more than once.
+
+Answer 1) The orignal algorithm compares each key with the other keys in the linked list, therefore, it has to iterate through the whole list to compare the key. For example First node of the linked list will be compared to remaining 5002 key the linked list, and the process goes for all the entries.
+
+The duplicates are reported more than once because the first occurence will be compared to the second occurence of the key and so on. when the outer loop reaches the second key, it will be compared again with the first key occurence print out the duplicate ke again. Therefore, there are multiple prints of duplicate value.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+2) What is the Big-O running time of the original program? Explain your answer.
+   
+Answer 2) The big-O running time of the original program is O(n^2), Since there are two for loops one inside the other. The outer loop will run for n times and the inner loop for n times. There running time is O(n^2).
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+3) Explain the algorithm in your new program.
+
+Answer 3) The new algorithm uses hash table which take a constant time to insert the key. It takes a constant time because of the hashFunc() which pinpoint the location of the key to be stored. I have used separate chaining method to store the keys which have the same hashing index. Therefore, the keys which points at the same index will be stored in the linked list. To print duplicates there is a function Contains() which returns true or false given the key user is looking for. Therefore search function also takes a constant time plus the time used for traversing through the LinkedList at that particular index. 
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+4) What is the Big-O running time of the new program? Explain your answer.
+        
+Answer 4) The Big-O running time of the new program is O(n). The worst case running time for the search algorithm is O(n) and for insert algorithm is O(n), when all the key will be inserted at a particular index.Therefore, the total running time is 2n, taking out constants the Big-O running time of the new program is O(n). The average time to insert and search a key is O(1).
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+5) How long does the original program take to complete? How long does the new program take to complete?
+        
+Answer 5) The new program took 106 milliseconds to complete. The orignam program took 653105 milliseconds to complete.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
